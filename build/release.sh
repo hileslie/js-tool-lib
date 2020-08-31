@@ -12,7 +12,12 @@ then
   echo "dist $VERSION ..."
 
   npm version $VERSION --message "[release] $VERSION"
-  
+  if [[ $VERSION =~ "beta" ]]
+  then
+    npm publish --tag beta
+  else
+    npm publish
+  fi
 fi
 # nrm use npm
 
