@@ -1,11 +1,12 @@
 {
   "name": "js-tool-lib",
-  "version": "0.1.1",
+  "version": "0.1.0",
   "description": "",
   "main": "lib/index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "dist": "webpack --config build/webpack.config.js"
+    "dist": "webpack --config build/webpack.config.js",
+    "pub": "sh build/release.sh"
   },
   "repository": {
     "type": "git",
@@ -15,6 +16,7 @@
   "author": "",
   "license": "ISC",
   "devDependencies": {
+    "select-version-cli": "0.0.2",
     "webpack": "^4.44.1",
     "webpack-cli": "^3.3.12"
   }
